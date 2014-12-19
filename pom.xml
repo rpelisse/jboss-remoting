@@ -46,7 +46,7 @@
         <apacheds.version>2.0.0-M11</apacheds.version>
         <apacheds.jdbm1.version>2.0.0-M2</apacheds.jdbm1.version>
         <apacheds.shared.version>1.0.0-M13</apacheds.shared.version>
-        <apacheds.api.version>1.0.0-M16</apacheds.api.version>        
+        <apacheds.api.version>1.0.0-M16</apacheds.api.version>
         <xnio.version>3.2.0.Final</xnio.version>
         <logging.version>3.1.4.GA</logging.version>
         <logging-tools.version>1.1.0.Final</logging-tools.version>
@@ -71,14 +71,14 @@
         <name>JBoss, a division of Red Hat, Inc.</name>
         <url>http://www.jboss.org/</url>
     </organization>
-    <dependencies>            
+    <dependencies>
        <dependency>
             <groupId>org.apache.directory.jdbm</groupId>
             <artifactId>apacheds-jdbm1</artifactId>
             <version>${apacheds.jdbm1.version}</version>
             <type>jar</type>
             <scope>test</scope>
-        </dependency>    
+        </dependency>
        <dependency>
             <groupId>org.apache.directory.server</groupId>
             <artifactId>apacheds-core</artifactId>
@@ -98,10 +98,10 @@
             <scope>test</scope>
             <exclusions>
                 <exclusion>
-                    <groupId>org.apache.directory.jdbm</groupId>                
-                    <artifactId>apacheds-jdbm1</artifactId>                    
+                    <groupId>org.apache.directory.jdbm</groupId>
+                    <artifactId>apacheds-jdbm1</artifactId>
                 </exclusion>
-            </exclusions>                 
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.directory.server</groupId>
@@ -125,13 +125,13 @@
             <groupId>org.apache.directory.api</groupId>
             <artifactId>api-ldap-codec-standalone</artifactId>
             <version>${apacheds.api.version}</version>
-            <scope>test</scope>  
-        </dependency>        
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.apache.directory.shared</groupId>
             <artifactId>shared-ldap-codec-standalone</artifactId>
             <version>${apacheds.shared.version}</version>
-            <scope>test</scope>  
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.directory.server</groupId>
@@ -139,7 +139,7 @@
             <version>${apacheds.version}</version>
             <scope>test</scope>
         </dependency>
-            
+
         <dependency>
             <groupId>org.jboss.logging</groupId>
             <artifactId>jboss-logging</artifactId>
@@ -232,6 +232,10 @@
                             <name>jboss.remoting.debug-buffer-leaks</name>
                             <value>${leak.debug}</value>
                         </property>
+                        <systemPropertyVariables>
+                         <user.language>en</user.language>
+                         <user.region>US</user.region>
+                        </systemPropertyVariables>
                     </systemProperties>
                     <enableAssertions>true</enableAssertions>
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
